@@ -19,6 +19,7 @@ describe PatriotGCP::Command::LoadToBigQueryCommand do
       options 'fieldDelimiter' => '\t',
               'writeDisposition' => 'WRITE_APPEND',
               'allowLargeResults' => true
+      polling_interval 30
     end 
     cmd = cmd.build[0]
     cmd = cmd.to_job.to_command(@config)
