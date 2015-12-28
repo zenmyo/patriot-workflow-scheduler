@@ -1,9 +1,8 @@
----
-layout: default
----
-## Architecture
+================
+Architecture
+================
 
-![Architecture](images/arch.png)
+.. image:: images/arch.png
 
 How jobs are executed with the patriot-workflow-scheduler is described
 in the above figure.  The jobs are defined with Patriot Batch Config
@@ -12,9 +11,10 @@ script and registered to JobStore.  The JobStore has a role of
 determining which jobs are executable by managing dependency.  The
 executable jobs are fetched by workers and executed by the workers.
 
-## Model of jobs and dependency
+Model of jobs and dependency
+==============================
 
-![Architecture](images/depmodel.png)
+.. image:: images/depmodel.png
 
 The job dependency model is shown in the above figure.  The model is
 designed on the basis of data flow.  The rounded rectangles and the
@@ -44,8 +44,7 @@ of extension can be achieved by only producer-side modification due to
 the existence of the virtual product ('all data').  By setting the
 'all data' as a product of the import3, the processAll requires
 completion of the import3 to become executable.  The patriot workflow
-scheduler provides [an original Patriot Batch Config DSL
-(PBC)](pbc.html) to describe the data-flow based dependency model.
+scheduler provides an original Patriot Batch Config DSL (:doc:`PBC <pbc>`) to describe the data-flow based dependency model.
 
-![Architecture](images/depmodel2.png)
+.. image:: images/depmodel2.png
 
